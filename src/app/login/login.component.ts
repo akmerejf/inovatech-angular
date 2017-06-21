@@ -1,22 +1,23 @@
 import { Component, OnInit } from '@angular/core';
 import {MdDialog, MdDialogRef, MdDialogConfig, MD_DIALOG_DATA} from '@angular/material';
 import { DialogComponent } from '../dialog/dialog.component';
-import { LoginComponent } from '../login/login.component';
+import { User } from './user';
 @Component({
-  selector: 'app-header',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css']
+  selector: 'login',
+  templateUrl: './login.component.html',
+  styleUrls: ['./login.component.css']
 })
-export class HeaderComponent implements OnInit {
+export class LoginComponent implements OnInit {
   dialogRef: MdDialogRef<any>;
-  login: LoginComponent;
-  constructor(public dialog: MdDialog) { }
+  user: User = new User();
+
+  constructor(public dialog: MdDialog) {}
 
   ngOnInit() {
   }
 
+
   open(key) {
-    
     this.dialogRef = this.dialog.open(DialogComponent);
 
     this.dialogRef.afterClosed().subscribe(result => {

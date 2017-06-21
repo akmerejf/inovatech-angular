@@ -1,0 +1,24 @@
+ 
+
+  <form (submit)="login($event)" class="row">
+    
+      <div class="input-field col m12">
+        <input name="email" type="text" class="validate" [(ngModel)]="user.email">
+        <label for="email">Email</label>
+      </div>
+      <div class="input-field col m12">
+      	
+        <input name="senha" type="password" class="validate" [(ngModel)]="user.senha">
+        <label for="senha">Senha</label>
+      </div>
+    
+    
+      <button type="submit" class="btn btn-primary">
+              Salvar
+      </button>
+    
+  </form>
+
+   
+  
+  
