@@ -1,24 +1,39 @@
  
+<div class="row">
 
-  <form (submit)="login($event)" class="row">
-    
-      <div class="input-field col m12">
-        <input name="email" type="text" class="validate" [(ngModel)]="user.email">
-        <label for="email">Email</label>
-      </div>
-      <div class="input-field col m12">
-      	
-        <input name="senha" type="password" class="validate" [(ngModel)]="user.senha">
-        <label for="senha">Senha</label>
-      </div>
-    
-    
-      <button type="submit" class="btn btn-primary">
-              Salvar
+  <form (submit)="login($event)" class="col s12">
+
+    <h1 class="text_h">Login</h1>
+
+    <div class="input-field m12">
+
+      <input name="email" type="text" class="validate" [(ngModel)]="user.email">
+      <label for="email">Email</label>
+
+    </div>
+
+    <div class="input-field m12">
+
+      <input name="senha" type="password" class="validate" [(ngModel)]="user.senha">
+      <label for="senha">Senha</label>
+
+    </div>
+
+    <div class="input-field s6 m12">
+
+      <button type="submit" class="btn salvar">
+        Salvar
       </button>
+
+      <button class="btn red" (click)="dialogRef.close()">
+        Cancelar
+      </button> 
+
+    </div>   
     
   </form>
 
+</div>
    
   
   

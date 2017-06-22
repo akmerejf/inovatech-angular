@@ -1,0 +1,33 @@
+h1{
+	color: #2196F3;
+}
+
+ /* label focus color */
+.input-field input:focus + label {
+ color: #2196F3;
+}
+
+/* label underline focus color */
+.input-field input:focus {
+ border-bottom: 1px solid #2196F3;
+}
+
+.salvar{
+	background: transparent;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #2196F3;
+	color: #2196F3;
+}
+
+.salvar:hover {
+
+	background: #2196F3;
+	color: #fff;
+}
+
+form{    
+	margin-left: 35%;
+	margin-right: 35%;
+}
+
