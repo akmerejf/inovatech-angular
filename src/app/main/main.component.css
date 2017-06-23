@@ -2,6 +2,31 @@
 	height: 150px !important;
 }
 
+.card {
+	width:200px;
+	font-size: 14px;
+}
+.card-title{
+	font-size: 18px;
+	font-weight: 500;
+}
+
+#index-banner {
+    min-height: 332px;
+    max-height: 464px;
+    position: relative;
+    background-color: #2196F3;
+}
+
+#Projetos{
+
+   background-color: #fff;
+}
+
+.negrito{
+	font-weight: 210;
+}
+
 @media (min-width:320px)  {
 
 	.text_h {
@@ -11,10 +36,21 @@
 	.text_h_sub {
 	    font-size: 1.3em;
 	}
+	.card {
+		width:150px;
+	}	
 
 }
 
-@media (min-width:600px)  {
+@media (min-width:480px)  {
+
+	.card {
+		width:200px;
+	}	
+
+}
+
+@media (min-width:640px)  {
 
 	.text_h {
 	    font-size: 2.3em;
@@ -24,17 +60,30 @@
 	    font-size: 1.8em;
 	}
 
+	.card {
+		width:180px;
+	}
+
+}
+
+@media (min-width:760px)  {
+
+	.card {
+		width:200px;
+	}	
+
 }
 
 @media (min-width:801px)  {
 
 	.text_h {
-	    font-size: 3.0em;
+	    font-size: 2.8em;
 	}
 
 	.text_h_sub {
 	    font-size: 2.0em;
 	}
+
 
 }
 

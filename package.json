@@ -22,6 +22,7 @@
     "@angular/platform-browser": "^4.0.0",
     "@angular/platform-browser-dynamic": "^4.0.0",
     "@angular/router": "^4.0.0",
+    "angular-background-img": "^1.1.2",
     "angular2-materialize": "^15.0.4",
     "core-js": "^2.4.1",
     "font-awesome": "^4.7.0",
