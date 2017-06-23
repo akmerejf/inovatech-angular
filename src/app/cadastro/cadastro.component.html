@@ -1,0 +1,56 @@
+<app-header></app-header>
+
+<div class="row">
+
+  <form (submit)="login($event)" class="col s12">
+
+    <h1 class="text_h">Cadastro</h1>
+    
+    <div class="input-field m12">
+
+      <input name="name" type="text" class="validate" >
+      <label for="name">Nome</label>
+
+    </div>
+
+    <div class="input-field m12">
+
+      <input name="email" type="text" class="validate" >
+      <label for="email">Email</label>
+
+    </div>
+
+    <div class="input-field m12">
+
+      <input name="senha" type="password" class="validate">
+      <label for="senha">Senha</label>
+
+    </div>
+
+    <div class="input-field m12">
+
+      <input id="remember-me" type="checkbox">
+      <label for="remember-me">Manter-me conectado</label>
+
+    </div>
+
+    <div class="input-field s12 botoes">
+
+      <div class="col s6">
+        
+        <button type="submit" class="btn btn-large salvar">
+          Salvar
+        </button>
+
+      </div>
+      <div class="col s6 semconta">
+        
+        <p>Já possui uma conta? <br/><a [routerLink]="['/login']">Login</a></p>
+              
+      </div>
+
+    </div>
+  
+  </form>
+
+</div>

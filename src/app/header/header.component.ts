@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {MdDialog, MdDialogRef, MdDialogConfig, MD_DIALOG_DATA} from '@angular/material';
 import { DialogComponent } from '../dialog/dialog.component';
 import { LoginComponent } from '../login/login.component';
 @Component({
@@ -8,20 +7,13 @@ import { LoginComponent } from '../login/login.component';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  dialogRef: MdDialogRef<any>;
+  
   login: LoginComponent;
-  constructor(public dialog: MdDialog) { }
+  constructor() { }
 
   ngOnInit() {
   }
 
-  open(key) {
-    
-    this.dialogRef = this.dialog.open(DialogComponent);
-
-    this.dialogRef.afterClosed().subscribe(result => {
-      this.dialogRef = null;
-    });
-  }
+  
 
 }

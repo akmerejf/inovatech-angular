@@ -1,41 +1,48 @@
- 
+<app-header></app-header> 
 <div class="row">
 
-  <form (submit)="login($event)" class="col s12">
+  <form [formGroup]="myForm" (ngSubmit)="onFormSubmit($event, myForm)"  class="col s12">
 
     <h1 class="text_h">Login</h1>
 
-    <div class="input-field m12">
+    <div class="input-field s12">
 
-      <input name="email" type="text" class="validate" [(ngModel)]="user.email">
+      <input name="email" type="text" class="validate" [formControl]="myForm.controls['email']">
       <label for="email">Email</label>
 
     </div>
 
-    <div class="input-field m12">
+    <div class="input-field s12">
 
-      <input name="senha" type="password" class="validate" [(ngModel)]="user.senha">
+      <input name="senha" type="password" class="validate" [formControl]="myForm.controls['senha']">
       <label for="senha">Senha</label>
 
     </div>
 
-    <div class="input-field m12">
+    <div class="input-field s12">
 
       <input id="remember-me" type="checkbox">
       <label for="remember-me">Manter-me conectado</label>
 
     </div>
 
-    <div class="input-field s6 m12 botoes">
+    <div class="input-field s12 botoes">
 
-      <div class="col s12 center">
-        <button type="submit" class="btn salvar">
-          Salvar
+      <div class="col s12 m12 l6">
+        
+        <button type="submit" class="btn btn-large salvar">
+          Enviar
         </button>
+
+      </div>
+      <div class="col s12 m12 l6 semconta">
+        
+        <p>Não possui uma conta? <br/><a [routerLink]="['/cadastro']">Cadastrar-me</a></p>
+              
       </div>
 
-    </div>   
-    
+    </div>
+  
   </form>
 
 </div>

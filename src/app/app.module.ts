@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { MaterializeModule } from "angular2-materialize";
 import { AppComponent } from './app.component';
@@ -12,6 +12,7 @@ import { MdDialogModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoginComponent } from './login/login.component';
 import { DialogComponent } from './dialog/dialog.component';
+import { CadastroComponent } from './cadastro/cadastro.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { DialogComponent } from './dialog/dialog.component';
     FooterComponent,
     MainComponent,
     LoginComponent,
-    DialogComponent
+    DialogComponent,
+    CadastroComponent
   ],
   entryComponents: [
     DialogComponent
@@ -32,7 +34,8 @@ import { DialogComponent } from './dialog/dialog.component';
     BrowserAnimationsModule,
     MaterializeModule,
     MdDialogModule,
-    routing
+    routing,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
