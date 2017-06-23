@@ -21,8 +21,8 @@
 
 
 #index-banner {
-    min-height: 332px;
-    max-height: 464px;
+    min-height: 232px;
+    max-height: 364px;
     position: relative;
     background-color: #2196F3;
 }
@@ -33,14 +33,13 @@
 }
 
 .text_h {
-    padding: 5% 0;
-    font-size: 4.0em;
-    font-weight: 100;
+    font-size: 3.0em;
+    font-weight: 250;
     color:white;
 }
 .text_h_sub {
     font-size: 2.0em;
-    font-weight: 100;
+    font-weight: 210;
     color:white;
 }
 

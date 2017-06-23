@@ -16,8 +16,21 @@
     <link href="min/custom-min.css" type="text/css" rel="stylesheet" >
     <link href="https://unpkg.com/@angular/material/prebuilt-themes/deeppurple-amber.css" 
   rel="stylesheet">
+
 </head>
 <body id="top" class="scrollspy">
+  
   <app-root><div class="status"></div></app-root>
+  
 </body>
 </html>
+
+<script type="text/javascript">
+    
+  $('.carousel.carousel-slider').carousel({fullWidth: true},setTimeout(autoplay));
+  
+  function autoplay() {
+    $('.carousel').carousel('next');
+    setTimeout(autoplay, 5000);
+  }
+</script>

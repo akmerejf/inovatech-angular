@@ -1,0 +1,40 @@
+.carousel-slider{
+	height: 150px !important;
+}
+
+@media (min-width:320px)  {
+
+	.text_h {
+	    font-size: 1.8em;
+	}
+
+	.text_h_sub {
+	    font-size: 1.3em;
+	}
+
+}
+
+@media (min-width:600px)  {
+
+	.text_h {
+	    font-size: 2.3em;
+	}
+
+	.text_h_sub {
+	    font-size: 1.8em;
+	}
+
+}
+
+@media (min-width:801px)  {
+
+	.text_h {
+	    font-size: 3.0em;
+	}
+
+	.text_h_sub {
+	    font-size: 2.0em;
+	}
+
+}
+
