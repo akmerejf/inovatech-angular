@@ -1,6 +1,8 @@
-
+.alert-danger{
+	color: red;
+}
 .row{
-	padding-top: 3%;
+	padding-top: 5%;
 	padding-left: 30%;
 	padding-right: 30%;
 }
@@ -48,4 +50,46 @@ button{
 }
 a{
 	cursor: pointer;
+}
+
+@media (min-width:320px)  {
+	
+	.row{
+
+		padding-left: 5%;
+		padding-right: 5%;
+	}
+
+}
+
+@media (min-width:480px)  {
+
+	.row{
+
+		padding-left: 15%;
+		padding-right: 15%;
+	}
+}
+
+@media (min-width:640px)  {
+
+	.row{
+
+		padding-left: 25%;
+		padding-right: 25%;
+	}
+	
+}
+
+@media (min-width:880px)  {
+	.row{
+
+		padding-left: 30%;
+		padding-right: 30%;
+	}
+
+	.salvar{
+		width: 12rem;
+	}
+	
 }
