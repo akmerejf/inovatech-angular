@@ -23,14 +23,14 @@ export class CadastroComponent implements OnInit {
 
     this.submited = false;
     this.user = this.fb.group({
-      name: new FormControl('akmere', [Validators.required, Validators.minLength(2)]),
+      name: new FormControl('', [Validators.required, Validators.minLength(2)]),
       account: this.fb.group({
-        email: new FormControl('akmere@gmail.com',  Validators.compose([Validators.required,  emailValidator])),
-        confirm: new FormControl('akmere@gmail.com',  Validators.compose([Validators.required,  emailValidator])),
+        email: new FormControl('',  Validators.compose([Validators.required,  emailValidator])),
+        confirm: new FormControl('',  Validators.compose([Validators.required,  emailValidator])),
       },  { validator: matchingFields('email', 'confirm')}),
       passwords: this.fb.group({
-        password: new FormControl('123456', [Validators.required, Validators.minLength(6)]),
-        confirmPassword: new FormControl('123456', Validators.required)
+        password: new FormControl('', [Validators.required, Validators.minLength(6)]),
+        confirmPassword: new FormControl('', Validators.required)
       }, { validator: matchingFields('password', 'confirmPassword')})
     });
   }
