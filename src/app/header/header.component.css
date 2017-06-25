@@ -5,3 +5,34 @@
 .wallpaper{
 	background-color: rgba(0,0,0,0.2);
 }
+
+.button-collapse{
+
+	cursor: pointer;
+}
+
+.side-nav{
+	background-color: #262626;
+	margin-top:55px;
+	width:200px;
+}
+
+.side-nav a{
+	color: #fff;
+}
+
+.side-nav a:hover{
+	color: #2196F3;
+}
+
+.side-nav li:hover{
+	background-color: #1e1e1e;
+}
+
+@media (min-width:600px)  {
+
+	.side-nav{
+		margin-top:63px;
+	}
+
+}
