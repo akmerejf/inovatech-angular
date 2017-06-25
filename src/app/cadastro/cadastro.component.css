@@ -21,6 +21,15 @@ h1{
  border-bottom: 1px solid #2196F3;
 }
 
+ .required {
+     color: red;
+   }
+
+.error {
+     border-bottom: 1px solid red;
+     box-shadow: 0 1px 0 0 red;
+}
+
 .salvar{
 	background: transparent;
 	border-style: solid;

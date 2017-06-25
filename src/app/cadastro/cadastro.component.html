@@ -2,29 +2,108 @@
 
 <div class="row">
 
-  <form  class="col s12">
+  <form *ngIf="!submited" (ngSubmit)="onSubmit(user)" [formGroup]="user" class="col s12">
 
-    <h1 class="text_h">Cadastro</h1>
-    
-    <div class="input-field m12">
+      <h1 class="text_h">Cadastro</h1>
+      <div class="input-field m12">
 
-      <input name="name" type="text" class="validate" >
-      <label for="name">Nome</label>
+        <input name="name" type="text" class="validate" formControlName="name" >
+        <label for="name">Nome 
+          <span 
+            class=" required"
+            *ngIf="user.get('name').hasError('required') && user.get('name').dirty" >
+            Nome é obrigatório.
 
+          </span>
+        </label>
+
+        <div formGroupName="account">
+      
+
+      <div class="input-field m12">
+
+        <input formControlName="email" name="email" type="text" class="validate" >
+        <label for="email">Email</label>
+
+      </div>
+      <div
+        class="error"
+        *ngIf="user.get('account').get('email').hasError('required') && user.get('account').get('email').dirty">
+        Email é obrigatório.
+      </div>
+
+      <div
+        class="error"
+        *ngIf="user.get('account').get('email').hasError('invalidEmail') && user.get('account').get('email').dirty">
+        Email inválido.
+      </div>
+      
+
+      <div class="input-field m12">
+
+        <input formControlName="confirm" name="confirm" type="text" class="validate" >
+        <label for="email">Confirme o email </label>
+
+      </div>
+
+      <div
+        class="error"
+        *ngIf="user.get('account').get('confirm').hasError('required') && user.get('account').get('confirm').dirty">
+        Confirmação de email obrigatório.
+      </div>
+
+      <div
+        class="error"
+        *ngIf="user.get('account').get('confirm').hasError('invalidEmail') && user.get('account').get('confirm').dirty">
+        Email inválido.
+      </div>
+
+      <div
+        class="error"
+        *ngIf="user.get('account').hasError('mismatchedFields') && user.get('account').get('confirm').dirty">
+        Email não coincide.
+      </div>
     </div>
 
-    <div class="input-field m12">
+        
+        <span
+          class="error"
+          *ngIf="user.get('name').hasError('minlength') && user.get('name').dirty">
+          Pelo menos duas letras.
+        </span>
+      </div>
 
-      <input name="email" type="text" class="validate" >
-      <label for="email">Email</label>
 
-    </div>
+    <div formGroupName="passwords">
+      <div class="input-field m12">
 
-    <div class="input-field m12">
+        <input formControlName="password" type="password" class="validate">
+        <label for="password">Senha</label>
 
-      <input name="senha" type="password" class="validate">
-      <label for="senha">Senha</label>
+        <div
+          class="error"
+          *ngIf="user.get('passwords').get('password').hasError('required') && user.get('passwords').get('password').dirty">
+          Senha obrigatória.
+        </div>
 
+        <div
+          class="error"
+          *ngIf="user.get('passwords').get('password').hasError('minlength') && user.get('passwords').get('password').dirty">
+          Senha curta.
+        </div>
+      </div>
+      
+
+      <div class="input-field m12">
+
+        <input formControlName="confirmPassword" type="password" class="validate">
+        <label for="confirmPassword">Confirme a senha</label>
+        <div
+          class="error"
+          *ngIf="user.get('passwords').hasError('mismatchedFields')">
+          Senhas não coincidem.
+        </div>
+      </div>
     </div>
 
     <div class="input-field m12">
@@ -37,8 +116,8 @@
     <div class="input-field s12 botoes">
 
       <div class="col s12 m12 l6">
-        
-        <button type="submit" class="btn btn-large salvar">
+        <swal #dialog title="Cadastro realizado com sucesso!" [options]="{ imageUrl: '/assets/images/arraial.jpeg'}" type="success" ></swal>
+        <button type="submit" (click)="submited=true; dialog.show().then(usuarioCriado())" [disabled]="user.invalid" class="btn btn-large salvar">
           Salvar
         </button>
 
@@ -52,5 +131,10 @@
     </div>
   
   </form>
+
+  <div *ngIf="submited">
+
+   
+  </div>
 
 </div>

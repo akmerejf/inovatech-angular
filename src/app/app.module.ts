@@ -13,7 +13,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoginComponent } from './login/login.component';
 import { DialogComponent } from './dialog/dialog.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
-
+import { SweetAlert2Module } from '@toverux/ngsweetalert2';
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,7 +35,8 @@ import { CadastroComponent } from './cadastro/cadastro.component';
     MaterializeModule,
     MdDialogModule,
     routing,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    SweetAlert2Module
   ],
   providers: [],
   bootstrap: [AppComponent]

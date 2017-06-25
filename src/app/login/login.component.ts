@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DialogComponent } from '../dialog/dialog.component';
-import { User } from './user';
+
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
@@ -11,8 +11,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class LoginComponent implements OnInit {
   myForm : FormGroup;
 
-  user: User = new User('','','');
-  users: Array<User>;
+  
   constructor(fb: FormBuilder) {
      this.myForm = fb.group({
       // We can set default values by passing in the corresponding value or leave blank if we wish to not set the value. For our example, we’ll default the gender to female.
@@ -21,20 +20,7 @@ export class LoginComponent implements OnInit {
     })
 
 
-  	this.users = [
-  	new User(
-  		'savio',
-  		'savio@gmail.com',
-  		'123123'),
-  	new User(
-  		'akmere',
-  		'akmere@gmail.com',
-  		'123123'),
-  	new User(
-  		'bitar',
-  		'bitar@gmail.com',
-  		'123123')
-  	];
+  	
   }
 
   ngOnInit() { 
