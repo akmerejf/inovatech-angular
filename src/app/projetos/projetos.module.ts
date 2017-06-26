@@ -6,6 +6,7 @@ import { ProjectService } from './project.service';
 import { projects } from './_reducers/project.reducer';
 import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { ShortTitlePipe } from './short-title.pipe';
 @NgModule({
   imports: [
     CommonModule,
@@ -20,7 +21,8 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
   ],
   declarations: [
   	ProjectComponent,
-    ProjectCountComponent
+    ProjectCountComponent,
+    ShortTitlePipe
   ],
   providers: [
   	 ProjectService

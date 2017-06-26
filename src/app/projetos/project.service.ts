@@ -14,9 +14,8 @@ export class ProjectService {
 
     // Redux based variables
     projects: Observable<Array<Project>>;
-
-    projectUrl = 'project';
-
+    isLoading: boolean;
+    projectUrl = 'repos';
     constructor(
         private http: HttpService,
         private store: Store<AppStore>
@@ -25,6 +24,7 @@ export class ProjectService {
     }
 
     loadProjects() {
+        this.isLoading = true;
         return this.http.get(this.projectUrl)
                         .map((res: Response) => {
                             let body = res.json();
@@ -34,6 +34,7 @@ export class ProjectService {
                             return { type: 'ADD_PROJECTS', payload };
                         })
                         .subscribe((action) => {
+                            this.isLoading = false;
                             this.store.dispatch(action);
                         });
     }

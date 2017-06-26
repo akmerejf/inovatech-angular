@@ -1,7 +1,38 @@
-<h2>List of Projects</h2>
-<button class="btn btn-primary" (click)="loadNew()">Load New</button>
-<ol>
-    <li *ngFor="let project of (projects | async)">
-        {{project.name}}
-    </li>
-</ol>
+<!--Work-->
+<div class="section scrollspy" id="Projetos">
+    <div class="container">
+        <h2 class="header text_b">Projetos <button class="btn btn-primary" (click)="loadNew()">Load New</button>
+		</h2>
+        <div class="row" *ngIf="projectService.isLoading == false">
+
+            <div  *ngFor="let project of (projects | async)" class="col s6 m4 l3" >
+
+                <div class="card" >
+
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator" src="./assets/images/project1.jpg">
+                    </div>
+
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">{{project.name | shortTitle}}<i class="mdi-navigation-more-vert right"></i></span>
+                        <p><a href="">link</a></p>
+                    </div>
+
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">{{project.name}}<i class="mdi-navigation-close right"></i></span>
+                        <p>Uma breve descrição...</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div *ngIf="projectService.isLoading" class="">
+			    <img src="assets/gifs/boobs.gif" >
+			</div>
+
+    </div>
+
+</div>

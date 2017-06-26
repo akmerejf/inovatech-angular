@@ -15,6 +15,7 @@ export class ProjectComponent implements OnInit, OnDestroy {
 
     // Redux based variables
     projects: Observable<Array<Project>>;
+    isLoading: boolean;
 
     private subscription: Subscription;
 
@@ -27,9 +28,10 @@ export class ProjectComponent implements OnInit, OnDestroy {
     ngOnInit() { 
         this.subscription = this.projects
                     .subscribe(projects => {
+                        
                         // Do something with campaigns
                     }, error => {
-
+                            
                         // Do something with error
                     });
 
