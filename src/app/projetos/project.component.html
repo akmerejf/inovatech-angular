@@ -1,0 +1,7 @@
+<h2>List of Projects</h2>
+<button class="btn btn-primary" (click)="loadNew()">Load New</button>
+<ol>
+    <li *ngFor="let project of (projects | async)">
+        {{project.name}}
+    </li>
+</ol>

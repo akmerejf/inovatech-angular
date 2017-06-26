@@ -37,7 +37,6 @@ export class CadastroComponent implements OnInit {
 
   usuarioCriado(){
     this.router.navigate(['/']);
-    // this.router.navigate(['/']);
   }
 
 
