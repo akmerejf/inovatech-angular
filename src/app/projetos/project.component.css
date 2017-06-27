@@ -1,3 +1,11 @@
 ol li {
     font-size: 16px;
 }
+
+.text_b{
+	cursor: pointer;
+}
+
+.card-content{
+	color: #262626;
+}

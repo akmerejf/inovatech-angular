@@ -1,8 +1,10 @@
 <!--Work-->
 <div class="section scrollspy" id="Projetos">
+    
     <div class="container">
-        <h2 class="header text_b">Projetos <button class="btn btn-primary" (click)="loadNew()">Load New</button>
-		</h2>
+
+        <a class="header text_b" (click)="loadNew()">Projetos</a>
+
         <div class="row" *ngIf="projectService.isLoading == false">
 
             <div  *ngFor="let project of (projects | async)" class="col s6 m4 l3" >
@@ -14,13 +16,21 @@
                     </div>
 
                     <div class="card-content">
-                        <span class="card-title activator grey-text text-darken-4">{{project.name | shortTitle}}<i class="mdi-navigation-more-vert right"></i></span>
-                        <p><a href="">link</a></p>
+                        <span class="card-title activator">
+                            {{project.name | shortTitle}}
+                        </span>
+                        <p>
+                            Setor
+                        </p>
                     </div>
 
                     <div class="card-reveal">
-                        <span class="card-title grey-text text-darken-4">{{project.name}}<i class="mdi-navigation-close right"></i></span>
-                        <p>Uma breve descrição...</p>
+                        <span class="card-title grey-text text-darken-4">
+                            {{project.name}}
+                        </span>
+                        <p>
+                            Uma breve descrição...
+                        </p>
                     </div>
 
                 </div>
@@ -28,10 +38,6 @@
             </div>
 
         </div>
-
-        <div *ngIf="projectService.isLoading" class="">
-			    <img src="assets/gifs/boobs.gif" >
-			</div>
 
     </div>
 

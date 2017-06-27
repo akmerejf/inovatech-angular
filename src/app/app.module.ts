@@ -20,7 +20,6 @@ import { XHRBackend, RequestOptions } from '@angular/http';
 import { HttpService } from './http.service';
 import { httpServiceFactory } from './http-service.factory';
 import { ProjetosModule } from './projetos/projetos.module';
-import { ShortTitlePipe } from './projetcs/short-title.pipe';
 
 @NgModule({
   declarations: [
@@ -31,8 +30,7 @@ import { ShortTitlePipe } from './projetcs/short-title.pipe';
     LoginComponent,
     DialogComponent,
     CadastroComponent,
-    LoaderComponent,
-    ShortTitlePipe
+    LoaderComponent
   ],
   entryComponents: [
     DialogComponent

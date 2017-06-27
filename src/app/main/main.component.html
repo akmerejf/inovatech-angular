@@ -1,8 +1,9 @@
-    <angular-loader ></angular-loader>
+<angular-loader ></angular-loader>
 
 <app-header></app-header>
 
 <div class="section no-pad-bot" id="index-banner">
+    
     <div class="container">
 
         <h1 class="center header text_h">Para pessoas <span class="span_h2">inovadoras</span>, <span class="span_h2">empreendedoras</span> e <span class="span_h2">colaborativas</span> que buscam um espaço para trocar ideias e experiências.</h1>
@@ -23,44 +24,63 @@
 
             <div class="carousel-fixed-item center">
               
-              <button [routerLink]="['/cadastro']" class="btn waves-effect waves-light orange darken-1">
+              <!--<button [routerLink]="['/cadastro']" class="btn waves-effect waves-light orange darken-1">
                 Começar
-              </button>
+              </button>-->
 
             </div>
 
-        </div>   
+        </div>
+
+        <ul class="tabs row center">
+
+          <li class="tab col s3">
+            <a href="#Projetos">
+              <i class="fa fa-cogs" aria-hidden="true"></i>
+              Projetos
+            </a>
+          </li>
+
+          <li class="tab col s3">
+            <a href="#Eventos">
+            <i class="fa fa-calendar" aria-hidden="true"></i>
+            Eventos
+            </a>
+          </li>
+
+          <li class="tab col s3">
+            <a href="#Financiamento">
+              <i class="fa fa-usd" aria-hidden="true"></i>
+              Financiamento
+            </a>
+          </li>
+
+          <li class="tab col s3">
+            <a href="#Mentoria">
+              <i class="fa fa-users" aria-hidden="true"></i>
+              Mentoria
+            </a>
+          </li>
+        </ul>
         
     </div>
 
 </div>
 
-<div class="row">
-  <div class="col md6">
-    <div class="panel panel-info">
-      <div class="panel-heading">
-        <h3 class="panel-title">Projetos</h3>
-      </div>
-      <div class="panel-body">
-
-        <projects></projects>
-      </div>
-    </div>
-  </div>
-
-    <div class="col md6">
-      <div class="panel panel-warning">
-        <div class="panel-heading">
-          <h3 class="panel-title"></h3>
-        </div>
-        <div class="panel-body">
-          
-          
-        </div>
-      </div>
-    </div>
+<div id="Projetos" class="col s12">
+  <projects></projects>
 </div>
 
+<div id="Eventos" class="col s12 center">
+  Evetos
+</div>
 
+<div id="Financiamento" class="col s12 center">
+  Financiamento
+</div>
+
+<div id="Mentoria" class="col s12 center">
+  Mentoria
+</div>
 
 <app-footer></app-footer>

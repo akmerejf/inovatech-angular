@@ -26,16 +26,16 @@ export class ProjectService {
     loadProjects() {
         this.isLoading = true;
         return this.http.get(this.projectUrl)
-                        .map((res: Response) => {
-                            let body = res.json();
-                            return body.data || {};
-                        })
-                        .map((payload: Project[]) => {
-                            return { type: 'ADD_PROJECTS', payload };
-                        })
-                        .subscribe((action) => {
-                            this.isLoading = false;
-                            this.store.dispatch(action);
-                        });
+            .map((res: Response) => {
+                let body = res.json();
+                return body.data || {};
+            })
+            .map((payload: Project[]) => {
+                return { type: 'ADD_PROJECTS', payload };
+            })
+            .subscribe((action) => {
+                this.isLoading = false;
+                this.store.dispatch(action);
+            });
     }
 }

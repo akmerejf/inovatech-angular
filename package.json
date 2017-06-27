@@ -24,6 +24,7 @@
     "@angular/router": "^4.0.0",
     "@ngrx/core": "^1.2.0",
     "@ngrx/store": "^2.2.2",
+    "@ngrx/store-devtools": "^3.2.4",
     "@toverux/ngsweetalert2": "^1.2.2",
     "angular-background-img": "^1.1.2",
     "angular2-materialize": "^15.0.4",
