@@ -54,9 +54,9 @@ import { ProjetosModule } from './projetos/projetos.module';
 
             provide: HttpService,
             useFactory: httpServiceFactory,
-            deps: [XHRBackend, RequestOptions, LoaderService ]    
+            deps: [XHRBackend, RequestOptions, LoaderService ]
         },
-       
+
         ],
   bootstrap: [AppComponent]
 })
