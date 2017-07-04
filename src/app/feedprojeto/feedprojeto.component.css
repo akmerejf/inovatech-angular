@@ -1,0 +1,69 @@
+
+.cabecalho{
+	background-color: #2196F3;
+}
+
+.brand-logo-dash{
+
+    color: #fff;
+    font-size: 2.1rem;
+    font-style: normal;
+    font-weight: 100;
+    padding: 0;
+    letter-spacing: 7px;
+}
+
+.userView{
+    line-height: 0px;
+    text-align: left;
+}
+
+.cabecalho a{
+    color: #fff;
+    display: inline-block;
+}
+
+.card{
+  color: #ccc;
+}
+
+.card-image img {
+  width: 100%;
+  height: 200px;
+  max-height: auto;
+}
+
+.chip{
+	cursor: pointer;
+  background-color: #2196F3;
+}
+
+.chip a{
+  color: #fff;
+}
+
+.side-nav{
+  background-color: #262626;
+  width:250px;
+}
+
+.collapsible-header{
+  color: #fff;
+}
+
+.collapsible-header:hover{
+  color: #ccc;
+}
+
+.side-nav li:hover{
+  background-color: #1e1e1e;
+}
+
+@media (min-width:1150px)  {
+
+  .side-nav{
+    background-color: #262626;
+    width:300px;
+  }
+
+}

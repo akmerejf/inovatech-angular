@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ProjectComponent } from './project.component';
+import { HomeProjectComponent } from './home_project.component';
 import { ProjectCountComponent } from './count.component';
 import { ProjectService } from './project.service';
 import { projects } from './_reducers/project.reducer';
@@ -16,11 +16,11 @@ import { ShortTitlePipe } from './short-title.pipe';
     StoreDevtoolsModule.instrumentOnlyWithExtension() 
   ],
   exports: [
-  	ProjectComponent,
+  	HomeProjectComponent,
   	ProjectCountComponent
   ],
   declarations: [
-  	ProjectComponent,
+  	HomeProjectComponent,
     ProjectCountComponent,
     ShortTitlePipe
   ],

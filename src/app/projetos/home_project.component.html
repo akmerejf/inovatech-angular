@@ -9,8 +9,8 @@
 
             <div  *ngFor="let project of (projects | async)" class="col s6 m4 l3" >
 
-                <div class="card" >
-
+                <div class="card">
+                    
                     <div class="card-image waves-effect waves-block waves-light">
                         <img class="activator" src="./assets/images/project1.jpg">
                     </div>
@@ -22,12 +22,6 @@
                         <p>
                             Setor
                         </p>
-                    </div>
-
-                    <div class="card-reveal">
-                        <span class="card-title grey-text text-darken-4">
-                            {{project.name}}
-                        </span>
                         <p>
                             Uma breve descrição...
                         </p>

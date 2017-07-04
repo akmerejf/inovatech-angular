@@ -6,12 +6,12 @@ import { ProjectService } from './project.service';
 
 @Component({
     selector: 'projects',
-    templateUrl: 'project.component.html',
-    styleUrls: ['project.component.css'],
+    templateUrl: 'home_project.component.html',
+    styleUrls: ['home_project.component.css'],
     encapsulation: ViewEncapsulation.None
 })
 
-export class ProjectComponent implements OnInit, OnDestroy {
+export class HomeProjectComponent implements OnInit, OnDestroy {
 
     // Redux based variables
     projects: Observable<Array<Project>>;
