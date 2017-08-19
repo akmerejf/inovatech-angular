@@ -21,6 +21,7 @@ import { HttpService } from './http.service';
 import { httpServiceFactory } from './http-service.factory';
 import { ProjetosModule } from './projetos/projetos.module';
 import { FeedprojetoComponent } from './feedprojeto/feedprojeto.component';
+import { FeedHeaderComponent } from './feed-header/feed-header.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { FeedprojetoComponent } from './feedprojeto/feedprojeto.component';
     DialogComponent,
     CadastroComponent,
     LoaderComponent,
-    FeedprojetoComponent
+    FeedprojetoComponent,
+    FeedHeaderComponent
   ],
   entryComponents: [
     DialogComponent

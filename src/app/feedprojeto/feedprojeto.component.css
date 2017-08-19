@@ -64,6 +64,7 @@
   .side-nav{
     background-color: #262626;
     width:300px;
+    z-index: 9998;
   }
 
 }

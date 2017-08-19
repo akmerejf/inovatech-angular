@@ -1,5 +1,6 @@
 .navbar-fixed-top{
 	background-color: #2196F3;
+	z-index: 9999;
 }
 
 .wallpaper{
